@@ -1,0 +1,32 @@
+// Needs to be imported
+// Private Route Navigation
+.icon-private-dropdown-arrow {
+  margin-left: 5px;
+  color: white;
+}
+.icon-margins-private-triplebar {
+  margin-left: 5px;
+  color: white;
+  &:hover {
+    color: $myCyan;
+    transition-duration: 0.5s;
+  }
+}
+
+ul {
+  li {
+      &.private-navigation-sidenav-user {
+        padding: 0;
+      }
+  }
+}
+#private-navigation-encapsulated {
+  background-color: $myGreyNav;
+  color:      $myWhiteNav;
+}
+
+// Public Route Navigation
+.icon-margins-public-triplebar {
+  margin-left: 5px;
+  color: white;
+}

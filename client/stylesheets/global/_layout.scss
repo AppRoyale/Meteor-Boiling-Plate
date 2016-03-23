@@ -1,0 +1,12 @@
+* {
+  &::-moz-selection {
+    color: black;
+    background: pink;
+    text-shadow: none;
+  }
+  &::selection {
+  color: black;
+  background: pink;
+  text-shadow: none;
+  }
+}

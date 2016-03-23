@@ -4,7 +4,7 @@ Default = React.createClass({
       <div className="app-root">
         <AppHeader />
   			<div className="container">
-  			  {this.props.yield}
+						{this.props.yield}
   			</div>
       </div>
 		);

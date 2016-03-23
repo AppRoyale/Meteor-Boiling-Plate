@@ -1,57 +1,55 @@
 Login = React.createClass({
   componentDidMount() {
-    Modules.client.login( { form: "#login" } );
+    Modules.client.login({form: "#login"});
   },
-  handleSubmit( event ) {
+  handleSubmit(event) {
     event.preventDefault();
   },
   render() {
     return (
-      <div id="login-page" className="row">
-       <div className="col s12 z-depth-4 card-panel">
-         <form className="login-form">
-           <div className="row">
-             <div className="input-field col s12 center">
-               <img src="images/login-logo.png" alt className="circle responsive-img valign profile-image-login" />
-               <p className="center login-form-text">Material Design Admin Template</p>
-             </div>
-           </div>
-           <div className="row margin">
-             <div className="input-field col s12">
-               <i className="mdi-social-person-outline prefix" />
-               <input id="username" type="text" />
-               <label htmlFor="username" className="center-align">Username</label>
-             </div>
-           </div>
-           <div className="row margin">
-             <div className="input-field col s12">
-               <i className="mdi-action-lock-outline prefix" />
-               <input id="password" type="password" />
-               <label htmlFor="password">Password</label>
-             </div>
-           </div>
-           <div className="row">
-             <div className="input-field col s12 m12 l12  login-text">
-               <input type="checkbox" id="remember-me" />
-               <label htmlFor="remember-me">Remember me</label>
-             </div>
-           </div>
-           <div className="row">
-             <div className="input-field col s12">
-               <a href="index.html" className="btn waves-effect waves-light col s12">Login</a>
-             </div>
-           </div>
-           <div className="row">
-             <div className="input-field col s6 m6 l6">
-               <p className="margin medium-small"><a href="page-register.html">Register Now!</a></p>
-             </div>
-             <div className="input-field col s6 m6 l6">
-               <p className="margin right-align medium-small"><a href="page-forgot-password.html">Forgot password ?</a></p>
-             </div>
-           </div>
-         </form>
-       </div>
-     </div>
+      <div className="row">
+        <div className="col s12 z-depth-4 card-panel">
+          <form id="login" className="login" onSubmit={this.handleSubmit}>
+            <div className="row">
+              <div className="input-field col s12 center">
+                <h2>Login</h2>
+                <p className="center login-form-text">LOGIN UND SO</p>
+              </div>
+            </div>
+            <div className="row margin">
+              <div className="input-field col s12">
+                <i className="mdi-social-person-outline prefix"/>
+                <input id="email" name="emailAddress" type="email" placeholder="Email"/>
+                <label htmlFor="emailAddress" className="center-align">Email</label>
+              </div>
+            </div>
+            <div className="row margin">
+              <div className="input-field col s12">
+                <i className="mdi-action-lock-outline prefix"/>
+                <input id="password" name="password" type="password" placeholder="Password"/>
+                <label htmlFor="password">Password</label>
+              </div>
+            </div>
+            <div className="row">
+              <div className="input-field col s12">
+                  <input type="submit" className="btn waves-effect waves-light col s1" value="Login" />
+              </div>
+            </div>
+            <div className="row">
+              <div className="input-field col s6 m6 l6">
+                <p className="margin medium-small">
+                  <a href="/signup">Register Now!</a>
+                </p>
+              </div>
+              <div className="input-field col s6 m6 l6">
+                <p className="margin right-align medium-small">
+                  <a href="/recover-password">Forgot password ?</a>
+                </p>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
     );
   }
 });
